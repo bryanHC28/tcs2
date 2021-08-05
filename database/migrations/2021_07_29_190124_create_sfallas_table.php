@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCfallasCreate extends Migration
+class CreateSfallasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateCfallasCreate extends Migration
      */
     public function up()
     {
-        Schema::create('cfallas_create', function (Blueprint $table) {
+        Schema::create('sfallas', function (Blueprint $table) {
             $table->id();
-            $table->string('cfalla_nombre');
-            $table->string('cfalla_descripcion');
+            $table->string('id_cfalla');
+            $table->string('sfalla_nombre');
+            $table->string('sfalla_descripcion');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateCfallasCreate extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cfallas_create');
+        Schema::dropIfExists('sfallas');
     }
 }

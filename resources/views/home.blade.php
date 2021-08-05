@@ -1,23 +1,44 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('plugins.Sweetalert2', false)
+    
+
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+@role('operativo')
+    I am a operativo!
+@endrole
+@role('visitante')
+    I am a visitante...
+@endrole
+@role('admin')
+ @livewire('dashboard.contenedor')
+@endrole
+@role('cliente')
+    
+   cliente
+    
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+@endrole
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script>
+        Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+)
+    </script>
+@stop
