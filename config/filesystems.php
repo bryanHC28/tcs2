@@ -38,8 +38,22 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
+        ],
+        'evidencias' => [
+            'driver' => 'local',
+            'root' => public_path() . '/evidencias',
+            'visibility' => 'public',
+        ],
+
+        'ftp_fotostickets' => [
+            'driver' => 'ftp',
+            'host' => env('FTP_HOST'),
+            'username' => env('FTP_USERNAME'),
+            'password' => env('FTP_PASSWORD'),
+            'port' => env('FTP_PORT'),
+            'root' => env('FTP_ROOT_FOTOSTICKETS')
         ],
 
         's3' => [
@@ -51,6 +65,20 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
+        ],
+		
+
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => '162.248.54.103',
+            'username' => 'corozco',
+            'password' => 'themaster1996',
+            // Optional FTP Settings...
+            //'port' => env('FTP_PORT', 21),
+            'root' => '/fotostickets.sumapp.cloud/',
+            // 'passive' => true,
+            // 'ssl' => true,
+            // 'timeout' => 30,
         ],
 
     ],

@@ -1,0 +1,55 @@
+
+#lightgallery3 {
+    display: flex;
+}
+
+#lightgallery2 {
+    display: flex;
+}
+
+#lightgallery {
+    display: flex;
+}
+
+a {
+    display: inline-block;
+}
+
+a img {
+    width: 100%;
+}
+
+
+.lg-actions .lg-prev:after {
+
+    content: '↤' !important;
+}
+
+.lg-actions .lg-next:before {
+
+    content: '↦' !important;
+}
+
+.lg-toolbar .lg-close:after {
+
+    content: '✕' !important;
+}
+
+.lg-toolbar .lg-download:after {
+
+    content: '⇊' !important;
+}
+.button {
+background-color: #4CAF50; /* Green */
+color: white;
+padding: 10px 22px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+
+}
+
+.button5 {background-color: #555555;} /* Black */

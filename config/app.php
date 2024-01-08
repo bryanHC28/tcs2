@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'company' => env('APP_COMPANY', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -27,6 +28,25 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+
+    /**
+     * -------------------------------------------------------------------------
+     * Correos
+     * -------------------------------------------------------------------------
+     */
+    'mail_toggle' => [
+        'reset_password' => env('MAIL_TOGGLE_RESET_PASSWORD', false),
+        'reset_password_expiration_in_minutes' => env('RESET_PASSWORD_EXPIRATION_IN_MINUTES', 30)
+    ],
+
+    /**
+     * -------------------------------------------------------------------------
+     * API_Key's
+     * -------------------------------------------------------------------------
+     */
+    'api_keys' => [
+        'self' => env('API_KEY_SELF', 'Laravel')
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +87,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Mexico_City',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +100,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,11 +181,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        
-
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Package Service Providers...
-         * 
+         *
          */
         Spatie\Permission\PermissionServiceProvider::class,
         /*
@@ -230,6 +249,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

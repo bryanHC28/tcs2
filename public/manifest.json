@@ -1,0 +1,38 @@
+{
+    "name": "Tickets",
+    "short_name": "Tickets",
+    "icons": [{
+            "src": "images/sumappen-36x36.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }, {
+            "src": "images/sumappen-g.png",
+            "sizes": "500x581",
+            "type": "image/png"
+        }],
+    "lang": "en-US",
+    "start_url": "index.php",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white"
+}

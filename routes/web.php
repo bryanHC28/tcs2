@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Old as Controllers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('tickets', Controllers\TicketsController::class)->names('tickets');
+Route::post('subcategoria', [Controllers\TicketsController::class, 'subcategoria'])->name('subcategoria.post');
+Route::post('area', [Controllers\TicketsController::class, 'area'])->name('area.post');
+Route::get('filtrograficas', [Resources\TicketsController::class, 'filtrograficas'])->name('filtrograficas');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
